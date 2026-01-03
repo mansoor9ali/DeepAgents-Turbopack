@@ -153,3 +153,4 @@ cython_debug/
 /data/
 /agent_files/
 /temp/
+/.langgraph_api/
