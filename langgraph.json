@@ -1,7 +1,8 @@
 {
     "dependencies": ["."],
     "graphs": {
-        "stock_research_agent": "./agents/stock_research_agent/stock_research_agent_hil.py:stock_research_agent"
+        "stock_research_agent": "./agents/stock_research_agent/stock_research_agent_hil.py:stock_research_agent",
+        "resume_analyst_agent": "./agents/resume_analyst_agent/resume_analyst_agent.py:resume_analyst_agent"
     }
 }
 
