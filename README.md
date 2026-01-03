@@ -1,5 +1,7 @@
 # DeepAgents Turbopack
 
+![DeepAgents Turbopack](screenshots/DeepAgent-Banner.jpg)
+
 A collection of LangGraph-based Deep Agents demonstrating various design patterns and architectures for building production-ready AI agents. This project showcases different agent patterns including Human-in-the-Loop (HIL), PII protection, and task management middleware.
 
 ## Overview
