@@ -2,8 +2,17 @@ import os
 import json
 
 from langchain.tools import tool
-import ollama
+from ollama import Client
 import requests
+from dotenv import load_dotenv
+load_dotenv()
+
+# Configure Ollama client with API key for web search
+_ollama_api_key = os.getenv('OLLAMA_API_KEY')
+_ollama_client = Client(
+    host='https://api.ollama.com',
+    headers={'Authorization': f'Bearer {_ollama_api_key}'} if _ollama_api_key else {}
+)
 
 # -------------------------
 # Web Search Tool
@@ -20,7 +29,7 @@ def web_search(query: str):
         JSON string of top results (max_results=2).
     """
 
-    response = ollama.web_search(query=query, max_results=2 , )
+    response = _ollama_client.web_search(query=query, max_results=2)
     response = response.results
 
     return response
